@@ -56,9 +56,8 @@ const Login = () => {
         <div className="text-center">
           <h2 className="mt-6 text-3xl font-bold text-gray-900">
             Sign in to your account
-          </h2>
           <p className="mt-2 text-sm text-gray-600">
-            Access your ArthaNidhi Payment Bank account
+            Access your ArthaNidhi Pay Investment & Banking account
           </p>
         </div>
 
