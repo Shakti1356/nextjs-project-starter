@@ -11,17 +11,30 @@ const Header = () => {
     navigate('/');
   };
 
+  const logoUrl = "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b2ee850d-36cf-4427-85dc-4de952f7c81f.png";
+
   return (
     <header className="bg-white shadow-md border-b border-gray-200">
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <h1 className="text-2xl font-bold text-gray-800">
-              ArthaNidhi Payment Bank
-            </h1>
-            <span className="ml-2 text-sm text-gray-500 font-medium">
-              Trusted Banking Solutions
-            </span>
+            <img 
+              src={logoUrl}
+              alt="ArthaNidhi Pay Investment & Banking Logo"
+              className="w-12 h-12 mr-3 rounded-full"
+              onError={(e) => { 
+                e.target.onerror = null; 
+                e.target.src = 'https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b2ee850d-36cf-4427-85dc-4de952f7c81f.png'; 
+              }}
+            />
+            <div>
+              <h1 className="text-2xl font-bold text-gray-800">
+                ArthaNidhi Pay Investment & Banking
+              </h1>
+              <span className="text-sm text-gray-500 font-medium">
+                Trusted Banking Solutions
+              </span>
+            </div>
           </div>
           
           <nav className="flex items-center space-x-6">
