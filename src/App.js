@@ -1,6 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
+import Footer from './components/Footer';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
@@ -9,9 +10,9 @@ import Transfer from './pages/Transfer';
 
 const App = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen flex flex-col bg-gradient-to-br from-orange-200 via-yellow-200 to-sky-200">
       <Header />
-      <main>
+      <main className="flex-grow">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
@@ -20,6 +21,7 @@ const App = () => {
           <Route path="/transfer" element={<Transfer />} />
         </Routes>
       </main>
+      <Footer />
     </div>
   );
 };
