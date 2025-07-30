@@ -2,15 +2,15 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
-  const heroImage = "https://placehold.co/1920x1080?text=Modern+Indian+banking+interface+with+elegant+design+and+secure+transactions";
+  const heroImage = "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/77a6274c-21d0-441d-b3a6-0c9f0207d99f.png";
   
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+    <div>
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-12">
         <div className="text-center mb-12">
           <h1 className="text-5xl font-bold text-gray-800 mb-6">
-            Welcome to ArthaNidhi Payment Bank
+            Welcome to ArthaNidhi Pay Investment & Banking
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
             Experience the future of banking with our secure, reliable, and innovative digital banking solutions 
@@ -25,7 +25,7 @@ const Home = () => {
             alt="Modern Indian banking interface with elegant design and secure transactions"
             onError={(e) => { 
               e.target.onerror = null; 
-              e.target.src = 'https://placehold.co/1920x1080?text=Banking+Interface'; 
+              e.target.src = 'https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/dbb3ecea-2801-4532-a023-7a08695802aa.png'; 
             }}
             className="w-full max-h-96 object-cover rounded-lg shadow-2xl"
           />
@@ -52,7 +52,7 @@ const Home = () => {
       <section className="bg-white py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
-            Why Choose ArthaNidhi Payment Bank?
+            Why Choose ArthaNidhi Pay Investment & Banking?
           </h2>
           
           <div className="grid md:grid-cols-3 gap-8">
@@ -153,18 +153,7 @@ const Home = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-800 text-white py-8">
-        <div className="container mx-auto px-4 text-center">
-          <h3 className="text-xl font-bold mb-2">ArthaNidhi Payment Bank</h3>
-          <p className="text-gray-400 mb-4">
-            Empowering India with Digital Banking Solutions
-          </p>
-          <p className="text-sm text-gray-500">
-            © 2024 ArthaNidhi Payment Bank. All rights reserved. | 
-            Licensed by Reserve Bank of India
-          </p>
-        </div>
-      </footer>
+      {/* Removed footer from here to use global Footer component */}
     </div>
   );
 };
