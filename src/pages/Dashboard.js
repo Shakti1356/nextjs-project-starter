@@ -66,7 +66,7 @@ const Dashboard = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+      <div className="flex items-center justify-center py-20">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
           <p className="text-gray-600">Loading your dashboard...</p>
@@ -76,7 +76,7 @@ const Dashboard = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 py-8">
+    <div className="py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Welcome Header */}
         <div className="mb-8">
@@ -84,7 +84,7 @@ const Dashboard = () => {
             Welcome back, {currentUser?.username || 'User'}!
           </h1>
           <p className="text-gray-600 mt-1">
-            Manage your ArthaNidhi Payment Bank account
+            Manage your ArthaNidhi Pay Investment & Banking account
           </p>
         </div>
 
@@ -113,7 +113,7 @@ const Dashboard = () => {
           <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
             <h3 className="text-lg font-medium text-gray-900 mb-2">Account Number</h3>
             <p className="text-2xl font-mono font-bold text-gray-800">{dashboardData.accountNumber}</p>
-            <p className="text-gray-500 text-sm mt-2">ArthaNidhi Payment Bank</p>
+            <p className="text-gray-500 text-sm mt-2">ArthaNidhi Pay Investment & Banking</p>
           </div>
 
           {/* Quick Actions Card */}
