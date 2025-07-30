@@ -58,7 +58,14 @@ export const createUserInDb = ({ username, email, password }) => {
       username,
       email,
       password,
-      accountNumber: `AN${Date.now()}`,
+    // Generate Artha Unique ID starting with 'ANPBhart' followed by a random 6-digit number
+    // Generate Artha Unique ID starting with 'ANPBharat' followed by a random 6-digit number to make 12 characters total
+    // Ensure total length is exactly 12 characters
+    accountNumber: (() => {
+      const prefix = 'ANPBharat';
+      const randomSixDigits = Math.floor(100000 + Math.random() * 900000).toString();
+      return prefix + randomSixDigits;
+    })(),
       balance: 10000 // Starting balance for new users
     };
     db.users.push(newUser);
