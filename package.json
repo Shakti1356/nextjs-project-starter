@@ -1,8 +1,8 @@
 {
-  "name": "arthanidhi-payment-bank",
+  "name": "ArthaNidhi-Pay-Investment & Digital-Banking",
   "version": "1.0.0",
   "private": true,
-  "description": "ArthaNidhi Payment Bank - Modern Banking Application for India",
+  "description": "ArthaNidhi  Investment & Digital Banking - Modern Banking Application for India",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -48,6 +48,6 @@
     "india",
     "fintech"
   ],
-  "author": "ArthaNidhi Payment Bank",
+  "author": "ArthaNidhi Pay Investment & Digital Banking",
   "license": "MIT"
 }
