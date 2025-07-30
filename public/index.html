@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="ArthaNidhi Payment Bank - Modern Banking Application for India. Secure, reliable, and innovative digital banking solutions." />
+    <meta name="keywords" content="banking, payment bank, india, digital banking, secure transactions, fund transfer" />
+    <meta name="author" content="ArthaNidhi Payment Bank" />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="ArthaNidhi Payment Bank" />
+    <meta property="og:description" content="Experience the future of banking with our secure, reliable, and innovative digital banking solutions designed specifically for the Indian market." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://arthanidhi-bank.com" />
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="ArthaNidhi Payment Bank" />
+    <meta name="twitter:description" content="Modern Banking Application for India" />
+    
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    
+    <!-- Manifest -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              'inter': ['Inter', 'sans-serif'],
+              'poppins': ['Poppins', 'sans-serif'],
+            },
+            colors: {
+              'bank-blue': '#1e40af',
+              'bank-green': '#059669',
+              'bank-gray': '#374151',
+            }
+          }
+        }
+      }
+    </script>
+    
+    <title>ArthaNidhi Payment Bank - Modern Banking for India</title>
+    
+    <style>
+      body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+      }
+      
+      .font-poppins {
+        font-family: 'Poppins', sans-serif;
+      }
+      
+      /* Loading animation */
+      .loading-spinner {
+        border: 4px solid #f3f4f6;
+        border-top: 4px solid #3b82f6;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        animation: spin 1s linear infinite;
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      
+      ::-webkit-scrollbar-track {
+        background: #f1f5f9;
+      }
+      
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 4px;
+      }
+      
+      ::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8;
+      }
+      
+      /* Smooth transitions */
+      * {
+        transition: all 0.2s ease-in-out;
+      }
+      
+      /* Focus styles for accessibility */
+      button:focus,
+      input:focus,
+      textarea:focus,
+      select:focus {
+        outline: 2px solid #3b82f6;
+        outline-offset: 2px;
+      }
+      
+      /* Print styles */
+      @media print {
+        .no-print {
+          display: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body class="antialiased">
+    <noscript>
+      <div style="padding: 20px; text-align: center; background-color: #fef2f2; color: #dc2626; border: 1px solid #fecaca;">
+        <h2>JavaScript Required</h2>
+        <p>ArthaNidhi Payment Bank requires JavaScript to function properly. Please enable JavaScript in your browser and reload the page.</p>
+      </div>
+    </noscript>
+    
+    <!-- Root element where React app will be mounted -->
+    <div id="root"></div>
+    
+    <!-- Loading fallback -->
+    <div id="loading-fallback" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(255, 255, 255, 0.9); z-index: 9999; justify-content: center; align-items: center; flex-direction: column;">
+      <div class="loading-spinner"></div>
+      <p style="margin-top: 20px; color: #374151; font-weight: 500;">Loading ArthaNidhi Payment Bank...</p>
+    </div>
+    
+    <!-- Service Worker Registration -->
+    <script>
+      // Register service worker for PWA capabilities (optional)
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/sw.js')
+            .then(function(registration) {
+              console.log('SW registered: ', registration);
+            })
+            .catch(function(registrationError) {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
+      }
+      
+      // Show loading fallback if app takes too long to load
+      setTimeout(function() {
+        if (!document.querySelector('#root').hasChildNodes()) {
+          document.getElementById('loading-fallback').style.display = 'flex';
+        }
+      }, 3000);
+      
+      // Hide loading fallback once app loads
+      window.addEventListener('load', function() {
+        setTimeout(function() {
+          document.getElementById('loading-fallback').style.display = 'none';
+        }, 500);
+      });
+    </script>
+  </body>
+</html>
